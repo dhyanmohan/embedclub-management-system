@@ -1,0 +1,17 @@
+public class navController {
+    
+    public PageReference login()
+    {
+PageReference pageRef = new PageReference('/apex/lendComp');
+        pageRef.setRedirect(true);
+        return pageRef;
+    }
+    
+     public PageReference login2()
+    {
+PageReference pageRef = new PageReference('/apex/openLabReg');
+        pageRef.setRedirect(true);
+        return pageRef;
+    }
+   
+}
