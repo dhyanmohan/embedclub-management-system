@@ -1,0 +1,39 @@
+<apex:page controller="openLab" docType="html-5.0" >
+    <apex:form >
+        <apex:pageBlock title="Open Lab Register">
+    <head>
+<meta http-equiv="Content-Type"  content="text/html; charset=UTF-8" />
+<title>Embed Club</title>
+        <style>
+        
+        </style>
+        </head>
+        <body>
+            <apex:pageBlockSection >
+             
+        
+            <label>Member ID:</label>
+            <apex:inputText value="{!Memberid}"/>
+            <label>In Time:</label>
+            <apex:input type="time" value="{!inTime}"/>
+                 <label>Out Time:</label>
+            <apex:input type="time" value="{!outTime}"/>
+                
+                <label>Date:</label>
+            <apex:input type="date" value="{!theDate}"/>
+            <div id="lower">               
+                <apex:commandbutton value="Submit" action="{!}"/>
+            </div><!--/ lower-->
+          
+   
+            
+            </apex:pageBlockSection>     
+            
+        </body>
+    
+    
+    
+    
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
