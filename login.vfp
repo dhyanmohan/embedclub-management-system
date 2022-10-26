@@ -1,0 +1,161 @@
+<apex:page sidebar="false" controller="CustomLoginController" showheader="false" standardStylesheets="false">
+<apex:form >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Embed Club</title>
+<style>
+    h1{
+    margin-top: 50px;
+    
+    }
+    
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    background: #f0f0f0;
+}
+#container {
+    position: fixed;
+    width: 340px;
+    height: 280px;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -170px;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    
+}
+form {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+label {
+    color: #555;
+    display: inline-block;
+    margin-left: 18px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+p a {
+    font-size: 11px;
+    color: #aaa;
+    float: right;
+    margin-top: -13px;
+    margin-right: 20px;
+ -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease;
+}
+p a:hover {
+    color: #555;
+}
+input {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 12px;
+    outline: none;
+}
+input[type=text],
+input[type=password] {
+    color: #777;
+    padding-left: 10px;
+    margin: 10px;
+    margin-top: 12px;
+    margin-left: 18px;
+    width: 290px;
+    height: 35px;
+    border: 1px solid #c7d0d2;
+    border-radius: 2px;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8;
+-webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease;
+    }
+input[type=text]:hover,
+input[type=password]:hover {
+    border: 1px solid #b6bfc0;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
+}
+input[type=text]:focus,
+input[type=password]:focus {
+    border: 1px solid #a8c9e4;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
+}
+#lower {
+    background: #ecf2f5;
+    width: 100%;
+    height: 69px;
+    margin-top: 20px;
+      box-shadow: inset 0 1px 1px #fff;
+    border-top: 1px solid #ccc;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+input[type=checkbox] {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.check {
+    margin-left: 3px;
+    font-size: 11px;
+    color: #444;
+    text-shadow: 0 1px 0 #fff;
+}
+input[type=submit] {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #acd6ef; /*IE fallback*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+    background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+    background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+    border-radius: 30px;
+    border: 1px solid #66add6;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
+    background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+    background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+}
+input[type=submit]:active {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
+    background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+    background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+}
+</style>
+
+</head>
+
+<body>
+   <center> <h1>
+        Embed Club
+       </h1> </center>
+    <center>  <apex:image url="data:image/jpeg;base64,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" width="150" /> </center>
+    <!-- Begin Page Content -->
+    <div id="container">
+        <form>
+            <label>Username:</label>
+            <apex:inputtext value="{!embed.Username__c}"/>
+            <label>Password:</label>
+             <apex:inputsecret value="{!embed.Passwords__c}"/>
+            <div id="lower">               
+                <apex:commandbutton value="Login" action="{!doLogin}"/>
+            </div><!--/ lower-->
+        </form>
+    </div><!--/ container-->
+    <!-- End Page Content -->
+</body>
+</apex:form>
+</apex:page>
