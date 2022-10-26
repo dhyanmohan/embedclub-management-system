@@ -1,0 +1,18 @@
+public class CustomLoginController {
+    public Embed_Club_Members__c embed{get; set;}
+
+    public CustomLoginController()
+    {
+        embed = new Embed_Club_Members__c();
+    }
+public pageReference doLogin()
+{  
+    List<Embed_Club_Members__c> loginembed = [select Username__c,Passwords__c from Embed_Club_Members__c where Username__c =:embed.Username__c AND Passwords__c =:embed.Passwords__c];
+    if (loginembed.size()>0){
+ PageReference pageRef = new PageReference('/apex/choicePage');
+        pageRef.setRedirect(true);
+        return pageRef; 
+    }
+    return null;
+}
+}
